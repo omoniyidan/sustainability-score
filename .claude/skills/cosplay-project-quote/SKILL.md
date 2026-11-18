@@ -3,12 +3,12 @@ name: cosplay-project-quote
 description: Build a detailed, clean 3-package price quote (HTML page plus PDF) for a cosplay, costume or wearable 3D-modelling project such as an Iron Man suit, helmet, armor or prop build. Use when the user asks for a quote, package pricing, price list or proposal for a cosplay or 3D print/wearable build.
 ---
 
-# Cosplay project quote (Voltage Studio)
+# Cosplay project quote
 
 Produces a branded quote: a published HTML artifact and an A4 PDF. The reference example is `assets/quote-template.html` (Iron Man Mark 42, Basic from $1,200).
 
 ## Defaults
-- Prepared by: **David, Voltage Studio** (do not leave blank fill-in lines for the studio).
+- Prepared by: leave **blank** (fill-in lines for name and studio, blank "Designer" signature label, no name in the footer) until the user gives a name. Once given, fill the Prepared by box, the Designer signature label and the footer with it. Never reuse a name from an earlier quote without being told.
 - Three packages: Basic / Standard (marked "Most chosen") / Premium. Each includes the one before.
 - Currency: ask. Default USD.
 - Leave out dates, validity periods, delivery days, timelines and rush pricing unless the user asks for them. Quote number has no date, e.g. `QT-<CODE>-001`.
