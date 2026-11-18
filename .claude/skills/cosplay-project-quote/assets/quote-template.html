@@ -1,0 +1,264 @@
+<title>Mark 42 Quote</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oxanium:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: printed-quote sheet. Gunmetal header band, three tier columns, spec matrix, schedule, terms. */
+:root{
+  --bg:#f3f2ef; --surface:#ffffff; --surface2:#ebeae6; --fg:#16181c; --muted:#5d6269;
+  --line:#d9d7d1; --red:#a8191f; --gold:#a97d12; --band:#1b1e24; --band-fg:#f1ede4; --ok:#1e7a46;
+  --display:'Oxanium','Segoe UI',sans-serif; --body:'Inter',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#101216; --surface:#181b21; --surface2:#20242b; --fg:#ecebe7; --muted:#9aa0a8;
+  --line:#2c313a; --red:#e04048; --gold:#d9a830; --band:#0a0b0e; --band-fg:#f1ede4; --ok:#4fc283; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#101216; --surface:#181b21; --surface2:#20242b; --fg:#ecebe7; --muted:#9aa0a8;
+  --line:#2c313a; --red:#e04048; --gold:#d9a830; --band:#0a0b0e; --band-fg:#f1ede4; --ok:#4fc283; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.55}
+*{box-sizing:border-box}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));padding-block:28px 56px;display:flex;flex-direction:column;gap:28px}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:.01em}
+h2{font-size:1.35rem;font-weight:600}
+.label{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+/* header */
+.head{background:var(--band);color:var(--band-fg);border-radius:6px;padding:28px;display:grid;grid-template-columns:1.5fr 1fr;gap:28px;border-bottom:4px solid var(--red)}
+.head h1{font-size:clamp(1.8rem,5vw,2.8rem);font-weight:700;line-height:1.05;margin-block:8px 10px}
+.head h1 span{color:var(--gold)}
+.head p{margin:0;color:#c9c5ba;max-width:52ch}
+.head .label{color:#9c978b}
+.meta{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;align-content:start;font-size:.85rem;min-width:0}
+.meta dt{color:#9c978b;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;padding-top:2px}
+.meta dd{margin:0;font-family:var(--mono);overflow-wrap:anywhere}
+/* parties */
+.parties{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:18px 20px;min-width:0}
+.box p{margin:6px 0 0}
+.fill{border-bottom:1px dashed var(--muted);color:var(--muted);display:inline-block;min-width:12ch}
+/* tiers */
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:stretch}
+.tier{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:22px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.tier.featured{border:2px solid var(--gold)}
+.tier .tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.tier h3{font-size:1.5rem;font-weight:700}
+.price{font-family:var(--display);font-size:2.4rem;font-weight:700;line-height:1;font-variant-numeric:tabular-nums}
+.price small{font-family:var(--mono);font-size:.7rem;color:var(--muted);font-weight:400;letter-spacing:.08em;margin-right:6px;text-transform:uppercase}
+.tier .sum{color:var(--muted);margin:0;font-size:.9rem}
+.tier ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px;font-size:.88rem}
+.tier li{display:flex;gap:9px}
+.tier li::before{content:"";flex:none;width:7px;height:7px;margin-top:.5em;background:var(--red);transform:rotate(45deg)}
+.tier .facts{margin-top:auto;border-top:1px solid var(--line);padding-top:12px;display:grid;grid-template-columns:1fr;gap:8px;font-family:var(--mono);font-size:.76rem}
+.facts b{display:block;color:var(--muted);font-weight:400;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase}
+/* tables */
+.scroll{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:6px}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:.88rem}
+th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;background:var(--surface2)}
+tr:last-child td{border-bottom:0}
+td.c,th.c{text-align:center}
+td.r,th.r{text-align:right}
+.y{color:var(--ok);font-weight:600}.n{color:var(--muted)}
+td small{display:block;color:var(--muted);font-size:.78rem}
+tfoot td{font-weight:600;background:var(--surface2)}
+.sec{display:flex;flex-direction:column;gap:12px}
+.sec>p{margin:0;color:var(--muted);max-width:70ch}
+/* breakdown */
+.break{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.break .box h3{font-size:1.05rem;margin-bottom:10px}
+.line{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px dashed var(--line);font-size:.86rem}
+.line span:last-child{font-family:var(--mono);white-space:nowrap}
+.line.t{border-bottom:0;border-top:2px solid var(--fg);margin-top:6px;padding-top:10px;font-weight:600}
+/* timeline */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--line);border-radius:6px;background:var(--surface);overflow:hidden}
+.step{padding:16px;border-right:1px solid var(--line);min-width:0}
+.step:last-child{border-right:0}
+.step h4{margin:6px 0 4px;font-family:var(--display);font-size:1rem}
+.step p{margin:0;font-size:.8rem;color:var(--muted)}
+.pay{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pay .box .price{font-size:1.8rem;margin-top:4px}
+.terms{columns:2;column-gap:32px;font-size:.84rem;color:var(--muted);padding-left:18px;margin:0}
+.terms li{margin-bottom:8px;break-inside:avoid}
+.sign{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.sign .box{min-height:110px;display:flex;flex-direction:column;justify-content:flex-end}
+.foot{text-align:center;color:var(--muted);font-size:.78rem}
+@media (max-width:860px){
+  .head,.parties,.tiers,.break,.pay,.sign{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}.step{border-right:0;border-bottom:1px solid var(--line)}.step:last-child{border-bottom:0}
+  .terms{columns:1}
+}
+@media print{:root{--bg:#fff}body{-webkit-print-color-adjust:exact;print-color-adjust:exact}.tier,.box,.scroll,.line{break-inside:avoid}.sec{break-inside:auto}h2{break-after:avoid}}
+</style>
+
+<div class="wrap">
+
+  <header class="head">
+    <div>
+      <div class="label">Project quotation · 3D modelling for print and cosplay</div>
+      <h1>Iron Man <span>Mark 42</span><br>Wearable Suit Build</h1>
+      <p>Complete digital build of the Mark 42 armor: modelled to your measurements, split for your printer, and documented so it can be assembled and worn.</p>
+    </div>
+    <dl class="meta">
+      <dt>Quote no.</dt><dd>QT-M42-001</dd>
+      <dt>Currency</dt><dd>USD ($)</dd>
+      <dt>Scale</dt><dd>1:1 wearable</dd>
+      <dt>Output</dt><dd>STL / 3MF + guides</dd>
+    </dl>
+  </header>
+
+  <section class="parties">
+    <div class="box"><div class="label">Prepared for</div>
+      <p><span class="fill">Client name</span><br><span class="fill">Email / contact</span></p></div>
+    <div class="box"><div class="label">Prepared by</div>
+      <p><strong>David</strong><br>Voltage Studio</p></div>
+  </section>
+
+  <section class="sec">
+    <h2>Choose a package</h2>
+    <p>Three levels, each one includes everything in the one before. All prices are fixed for the scope listed.</p>
+    <div class="tiers">
+
+      <article class="tier">
+        <div class="tag">Package 1</div>
+        <h3>Basic</h3>
+        <div class="price"><small>from</small>$1,200</div>
+        <p class="sum">The full armor shell, modelled and print-ready.</p>
+        <ul>
+          <li>Reference study of the Mark 42 (film and comic-accurate proportions)</li>
+          <li>All 14 armor segments modelled in 3D</li>
+          <li>Scaled to your body measurements</li>
+          <li>Parts split to fit your printer bed, with alignment pegs</li>
+          <li>STL files plus numbered assembly map</li>
+          <li>1 revision round</li>
+        </ul>
+        <div class="facts"><div><b>Revisions</b>1</div></div>
+      </article>
+
+      <article class="tier featured">
+        <div class="tag">Package 2 · Most chosen</div>
+        <h3>Standard</h3>
+        <div class="price"><small>from</small>$2,400</div>
+        <p class="sum">Adds the surface detail and moving parts that sell the look.</p>
+        <ul>
+          <li>Everything in Basic</li>
+          <li>Panel lines, rivets, vents and seam detail pass</li>
+          <li>Hinged faceplate with magnet seats</li>
+          <li>Repulsor gauntlets with palm cavity</li>
+          <li>Sanding, priming and paint reference guide</li>
+          <li>Turntable render and 3 still renders</li>
+          <li>2 revision rounds</li>
+        </ul>
+        <div class="facts"><div><b>Revisions</b>2</div></div>
+      </article>
+
+      <article class="tier">
+        <div class="tag">Package 3</div>
+        <h3>Premium</h3>
+        <div class="price"><small>from</small>$4,200</div>
+        <p class="sum">A suit built to be worn, lit and moved in.</p>
+        <ul>
+          <li>Everything in Standard</li>
+          <li>Articulated joints for shoulders, elbows, knees and waist</li>
+          <li>LED layout: eyes, arc reactor, repulsors, with wiring paths</li>
+          <li>Under-suit, strap and harness design</li>
+          <li>Test print of one fit-check piece</li>
+          <li>Video walkthrough of assembly</li>
+          <li>3 revision rounds</li>
+        </ul>
+        <div class="facts"><div><b>Revisions</b>3</div></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>Price breakdown</h2>
+    <div class="break">
+      <div class="box"><h3>Basic</h3>
+        <div class="line"><span>Reference and proportion study</span><span>$150</span></div>
+        <div class="line"><span>Armor modelling, 14 segments</span><span>$600</span></div>
+        <div class="line"><span>Body-fit scaling</span><span>$200</span></div>
+        <div class="line"><span>Print splitting and pegs</span><span>$150</span></div>
+        <div class="line"><span>Assembly map</span><span>$100</span></div>
+        <div class="line t"><span>Total</span><span>$1,200</span></div></div>
+      <div class="box"><h3>Standard</h3>
+        <div class="line"><span>Basic package</span><span>$1,200</span></div>
+        <div class="line"><span>Surface detail pass</span><span>$450</span></div>
+        <div class="line"><span>Hinged faceplate</span><span>$300</span></div>
+        <div class="line"><span>Repulsor gauntlets</span><span>$250</span></div>
+        <div class="line"><span>Finishing guide and renders</span><span>$200</span></div>
+        <div class="line t"><span>Total</span><span>$2,400</span></div></div>
+      <div class="box"><h3>Premium</h3>
+        <div class="line"><span>Standard package</span><span>$2,400</span></div>
+        <div class="line"><span>Articulated joints</span><span>$700</span></div>
+        <div class="line"><span>LED and wiring layout</span><span>$500</span></div>
+        <div class="line"><span>Under-suit and harness</span><span>$350</span></div>
+        <div class="line"><span>Fit-check test print and video</span><span>$250</span></div>
+        <div class="line t"><span>Total</span><span>$4,200</span></div></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>What gets built, part by part</h2>
+    <p>The Mark 42 is modelled as 14 armor segments. Detail level changes by package.</p>
+    <div class="scroll"><table>
+      <thead><tr><th>Segment</th><th>Notes</th><th class="c">Basic</th><th class="c">Std</th><th class="c">Prem</th></tr></thead>
+      <tbody>
+        <tr><td>Helmet</td><td>Shell, jaw, ear plates<small>Standard adds hinged faceplate</small></td><td class="c y">Static</td><td class="c y">Hinged</td><td class="c y">Hinged + LED eyes</td></tr>
+        <tr><td>Gorget / neck ring</td><td>Flexible-seat collar</td><td class="c y">✓</td><td class="c y">✓</td><td class="c y">✓</td></tr>
+        <tr><td>Chest and arc reactor</td><td>Torso plate with reactor housing</td><td class="c y">Housing</td><td class="c y">Housing</td><td class="c y">Lit reactor</td></tr>
+        <tr><td>Back plate</td><td>Spine and rear shell</td><td class="c y">✓</td><td class="c y">✓</td><td class="c y">✓</td></tr>
+        <tr><td>Shoulders (L/R)</td><td>Pauldron and deltoid</td><td class="c y">Fixed</td><td class="c y">Fixed</td><td class="c y">Articulated</td></tr>
+        <tr><td>Upper arms (L/R)</td><td>Bicep shell</td><td class="c y">✓</td><td class="c y">✓</td><td class="c y">✓</td></tr>
+        <tr><td>Forearms (L/R)</td><td>Bracer and wrist</td><td class="c y">✓</td><td class="c y">✓</td><td class="c y">✓</td></tr>
+        <tr><td>Gauntlets (L/R)</td><td>Hand armor, repulsor palm</td><td class="c n">Plain</td><td class="c y">Repulsor</td><td class="c y">Repulsor + LED</td></tr>
+        <tr><td>Abdomen</td><td>Segmented waist plates</td><td class="c y">Fixed</td><td class="c y">Fixed</td><td class="c y">Articulated</td></tr>
+        <tr><td>Hip / groin</td><td>Belt and side plates</td><td class="c y">✓</td><td class="c y">✓</td><td class="c y">✓</td></tr>
+        <tr><td>Thighs (L/R)</td><td>Upper leg shell</td><td class="c y">✓</td><td class="c y">✓</td><td class="c y">✓</td></tr>
+        <tr><td>Knees (L/R)</td><td>Cap and joint cover</td><td class="c y">Fixed</td><td class="c y">Fixed</td><td class="c y">Articulated</td></tr>
+        <tr><td>Shins (L/R)</td><td>Greave</td><td class="c y">✓</td><td class="c y">✓</td><td class="c y">✓</td></tr>
+        <tr><td>Boots (L/R)</td><td>Foot shell and ankle</td><td class="c y">✓</td><td class="c y">✓</td><td class="c y">✓</td></tr>
+      </tbody></table></div>
+  </section>
+
+  <section class="sec">
+    <h2>Optional add-ons</h2>
+    <div class="scroll"><table>
+      <thead><tr><th>Add-on</th><th>Description</th><th class="r">Price</th></tr></thead>
+      <tbody>
+        <tr><td>Extra revision round</td><td>One additional round of changes after delivery</td><td class="r mono">$150</td></tr>
+        <tr><td>Servo faceplate mechanism</td><td>Motor mount and linkage design for auto-opening helmet</td><td class="r mono">$450</td></tr>
+        <tr><td>Weathering and battle damage</td><td>Scratched and scorched surface variant in the model and renders</td><td class="r mono">$300</td></tr>
+        <tr><td>Display stand</td><td>Mannequin or wall mount designed for the finished suit</td><td class="r mono">$250</td></tr>
+        <tr><td>Full 3D printing and shipping</td><td>Printing of all parts on my machines (quoted after file size is known)</td><td class="r mono">On request</td></tr>
+        <tr><td>Commercial licence</td><td>Right to sell prints or display for paid events</td><td class="r mono">+50% of package</td></tr>
+      </tbody></table></div>
+  </section>
+
+  <section class="sec">
+    <h2>Payment schedule</h2>
+    <div class="pay">
+      <div class="box"><div class="label">On approval</div><div class="price">40%</div><p>Deposit to start work and reserve your slot.</p></div>
+      <div class="box"><div class="label">At blockout sign-off</div><div class="price">30%</div><p>Due when proportions and part layout are approved.</p></div>
+      <div class="box"><div class="label">On delivery</div><div class="price">30%</div><p>Due before final files are released.</p></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>Terms</h2>
+    <ol class="terms">
+      <li>Prices cover the digital design work listed. Printing, materials, electronics and shipping are not included unless stated.</li>
+      <li>The Mark 42 is a Marvel character. Files are for personal, non-commercial use unless the commercial licence add-on is purchased and you hold any rights required.</li>
+      <li>Accurate body measurements and printer bed size must be supplied before blockout. Late or changed measurements may move the schedule.</li>
+      <li>Revisions are changes within the approved design. A change of direction after blockout sign-off is quoted separately.</li>
+      <li>Final files are released once the last payment clears. Work in progress remains with the designer until then.</li>
+      <li>Deposits are non-refundable once blockout has started.</li>
+    </ol>
+  </section>
+
+  <section class="sign">
+    <div class="box"><div class="label">Client approval</div><p>Package: <span class="fill"></span></p></div>
+    <div class="box"><div class="label">Designer · David, Voltage Studio</div><p>Signed: <span class="fill"></span></p></div>
+  </section>
+
+  <p class="foot">Voltage Studio · QT-M42-001 · Iron Man Mark 42 Wearable Suit Build · All amounts in USD</p>
+</div>
+
